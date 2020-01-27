@@ -1,4 +1,4 @@
-# Amazon SDE Intern 2020 Questions:
+## Amazon SDE Intern 2020 Questions:
 
 [287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
 [347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
@@ -25,18 +25,7 @@
 [98](https://leetcode.com/problems/validate-binary-search-tree/) Validate BST  
 [939](https://leetcode.com/problems/minimum-area-rectangle/) Minimum Area Recatangle  
 
-
-
-
-
-
-
-
-
-
-
-
-sort a list based on order in the second list
+sort a list based on order in the second list  
 implement stack using arrays  
 Given a binary tree, print its immediate right neighbor (level wise)  
 First occurence of an element in an array  
@@ -46,27 +35,24 @@ Delete alternate nodes from a circular linked list.
 Median of BST  
 
 
+## Someone else's final list
+LRU cachue using Doubly Linked List and dictionary  
+Roman <-> Integer  
+Dial keypad (Backtrack+DFS)  
+BST verification  
+Width/Diameter of BT  
+Path Sum Leetcode (root to node)  
+Reversing a Linked List (LL)  
+Create copy of LL using random pointer  
+LL as number and add those.  
+Merge k sorted LL  
+BFS/DFS  
+Level order traversal  
+Zig zag traversal    
+ BFS search between a start and an end in a graph  
 
 
-
-
-# Someone else's final list
-LRU cachue using Doubly Linked List and dictionary
-Roman <-> Integer
-Dial keypad (Backtrack+DFS)
-BST verification
-Width/Diameter of BT
-Path Sum Leetcode (root to node)
-Reversing a Linked List (LL)
-Create copy of LL using random pointer
-LL as number and add those.
-Merge k sorted LL
-BFS/DFS
-Level order traversal
-Zig zag traversal  
- BFS search between a start and an end in a graph
-
-Behavioral Questions:  
+## Behavioral Questions:  
 Tell me about yourself  
 Sacrifice for larger rewards related question !?  
 Things you did out of your daily job responsiblity ?  
@@ -84,15 +70,11 @@ Have you ever had to make a tough decision without consulting anybody? (bias for
 Have you ever helped a peer who was struggling to understand technology? (ownership)  
 Talk about a time I had a tough deadline and how did I deal with it.  
 setbacks on projects  
-
 Tell me about a time you made a mistake.  
-
-
 
 
 https://www.amazon.jobs/en/principles
 https://interviewgenie.com/blog-1/category/Amazon+interviews
 https://leetcode.com/discuss/interview-question/437082/Amazon-Behavioral-questions-or-Leadership-Principles-or-LP
 https://medium.com/@scarletinked/are-you-the-leader-were-looking-for-interviewing-at-amazon-8301d787815d
-
 [SDE1 Final Interview Questions](https://leetcode.com/discuss/interview-question/488887/amazon-final-interview-questions-sde1)
