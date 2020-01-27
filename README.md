@@ -1,11 +1,11 @@
 ## Amazon SDE Intern 2020 Questions:
 
-[287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
-[347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
+### [287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
+### [347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
 ```
 keep track of the elements in a minheap with their count in first index.
 ```
-[23.](https://leetcode.com/problems/merge-k-sorted-lists/) Merge k Sorted Lists  
+### [23.](https://leetcode.com/problems/merge-k-sorted-lists/) Merge k Sorted Lists  
 ```python
 # create a helper method to merge individual lists
 # this is the same method as merging one list
@@ -39,7 +39,7 @@ r = self.mergeKLists(lists[mid:])
 
 return merge(l, r)
 ```
-[997.](https://leetcode.com/problems/find-the-town-judge/) Find the Town Judge  
+### [997.](https://leetcode.com/problems/find-the-town-judge/) Find the Town Judge  
 ```python
 # make an array of size n+1 for zero indexing
 # for each pair in the array
@@ -60,7 +60,7 @@ for i in range(1,N+1):
         
 return -1
 ```
-[200](https://leetcode.com/problems/number-of-islands/) Number of Islands  
+### [200](https://leetcode.com/problems/number-of-islands/) Number of Islands  
 ```python
 # Do two for loops then look for if i,j is marked as land.
 # call recursive dfs, then count += 1.
@@ -90,7 +90,7 @@ for i in range(row):
             count += 1
 return count     
 ```
-[973](https://leetcode.com/problems/k-closest-points-to-origin/) K Closest Points to Origin  
+### [973](https://leetcode.com/problems/k-closest-points-to-origin/) K Closest Points to Origin  
 ```
 go through each point.
 calculate distance as negative to make a maxheap.
@@ -98,19 +98,19 @@ if length of maxheap is equal to k, pushpop
 else push onto heap
 return the pair of points from maxheap
 ```
-[91](https://leetcode.com/problems/decode-ways/) Decode Ways  
-[1060](https://leetcode.com/problems/missing-element-in-sorted-array/) Missing Element in Sorted Array  
-[56](https://leetcode.com/problems/merge-intervals/) Merge Intervals  
-[226](https://leetcode.com/problems/invert-binary-tree/) Invert Binary Tree  
-[155](https://leetcode.com/problems/min-stack/) Min Stack  
-[472](https://leetcode.com/problems/concatenated-words/) Concatenated Words  
-[121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) Best Time to Buy and Sell Stock  
+### [91](https://leetcode.com/problems/decode-ways/) Decode Ways  
+### [1060](https://leetcode.com/problems/missing-element-in-sorted-array/) Missing Element in Sorted Array  
+### [56](https://leetcode.com/problems/merge-intervals/) Merge Intervals  
+### [226](https://leetcode.com/problems/invert-binary-tree/) Invert Binary Tree  
+### [155](https://leetcode.com/problems/min-stack/) Min Stack  
+### [472](https://leetcode.com/problems/concatenated-words/) Concatenated Words  
+### [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) Best Time to Buy and Sell Stock  
 ```
 Keep track of the minimum value in array.
 take difference of the day - minimum.
 update maximum.
 ```
-[108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) Convert Sorted Array to Binary Search Tree  
+### [108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) Convert Sorted Array to Binary Search Tree  
 ```python
 # Create a convert function to call recursively.
 # Call convert function with beginning index and ending
@@ -129,10 +129,10 @@ update maximum.
     return node
 return convert(0, len(nums) - 1)
 ```
-[348](https://leetcode.com/problems/design-tic-tac-toe/) Design Tic-Tac-Toe  
-[767](https://leetcode.com/problems/reorganize-string/) Reorganize String  
-[31](https://leetcode.com/problems/next-permutation/) Next Permutation  
-[543](https://leetcode.com/problems/diameter-of-binary-tree/) Diameter of Binary Tree  
+### [348](https://leetcode.com/problems/design-tic-tac-toe/) Design Tic-Tac-Toe  
+### [767](https://leetcode.com/problems/reorganize-string/) Reorganize String  
+### [31](https://leetcode.com/problems/next-permutation/) Next Permutation  
+### [543](https://leetcode.com/problems/diameter-of-binary-tree/) Diameter of Binary Tree  
 ```python
 # Keep a global maximum value
 # create a depth function which calculates the max depth.
@@ -151,8 +151,8 @@ self.ans = 0
 depth(root)
 return self.ans
 ```
-[48](https://leetcode.com/problems/rotate-image/) Rotate Image  
-[49](https://leetcode.com/problems/group-anagrams/) Group Anagrams  
+### [48](https://leetcode.com/problems/rotate-image/) Rotate Image  
+### [49](https://leetcode.com/problems/group-anagrams/) Group Anagrams  
 ```python
 # make a dictionary
 # go through each word in strings
@@ -167,7 +167,7 @@ for word in strs:
         
 return list(d.values())
 ```
-[387](https://leetcode.com/problems/first-unique-character-in-a-string/) First Unique Character in a String (then in stream)
+### [387](https://leetcode.com/problems/first-unique-character-in-a-string/) First Unique Character in a String (then in stream)
 ```python
 # Have a string of letters in the alphabet.
 # For each letter in alphabet,
@@ -180,9 +180,9 @@ letters='abcdefghijklmnopqrstuvwxyz'
 index=[s.index(l) for l in letters if s.count(l) == 1]
 return min(index) if len(index) > 0 else -1
 ```
-[232](https://leetcode.com/problems/implement-queue-using-stacks/) Implement Queue using Stacks  
-[98](https://leetcode.com/problems/validate-binary-search-tree/) Validate BST  
-[939](https://leetcode.com/problems/minimum-area-rectangle/) Minimum Area Rectangle  
+### [232](https://leetcode.com/problems/implement-queue-using-stacks/) Implement Queue using Stacks  
+### [98](https://leetcode.com/problems/validate-binary-search-tree/) Validate BST  
+### [939](https://leetcode.com/problems/minimum-area-rectangle/) Minimum Area Rectangle  
 
 sort a list based on order in the second list  
 implement stack using arrays  
