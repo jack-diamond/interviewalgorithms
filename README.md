@@ -5,7 +5,7 @@
 Amazon SDE Intern 2020 Questions:
 
 [287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
-[347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements
+[347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
 [23.](https://leetcode.com/problems/merge-k-sorted-lists/) Merge k Sorted Lists  
 [997.](https://leetcode.com/problems/find-the-town-judge/) Find the Town Judge  
 [200](https://leetcode.com/problems/number-of-islands/) Number of Islands  
@@ -17,7 +17,7 @@ Amazon SDE Intern 2020 Questions:
 [155](https://leetcode.com/problems/min-stack/) Min Stack  
 [472](https://leetcode.com/problems/concatenated-words/) Concatenated Words  
 [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) Best Time to Buy and Sell Stock  
-[108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) Convert Sorted Array to Binary Search Tree
+[108](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) Convert Sorted Array to Binary Search Tree  
 [348](https://leetcode.com/problems/design-tic-tac-toe/) Design Tic-Tac-Toe  
 [767](https://leetcode.com/problems/reorganize-string/) Reorganize String  
 [31](https://leetcode.com/problems/next-permutation/) Next Permutation  
@@ -54,7 +54,7 @@ Median of BST
 
 
 
-#Someone else's final list
+# Someone else's final list
 LRU cachue using Doubly Linked List and dictionary
 Roman <-> Integer
 Dial keypad (Backtrack+DFS)
