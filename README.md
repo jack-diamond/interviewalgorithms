@@ -1,8 +1,4 @@
-# interviewalgorithms
-
-[I'm an inline-style link](https://www.google.com)
-
-Amazon SDE Intern 2020 Questions:
+# Amazon SDE Intern 2020 Questions:
 
 [287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
 [347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
