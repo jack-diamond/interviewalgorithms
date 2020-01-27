@@ -125,6 +125,24 @@ return the pair of points from maxheap
 ### [91.](https://leetcode.com/problems/decode-ways/) Decode Ways  
 ### [1060.](https://leetcode.com/problems/missing-element-in-sorted-array/) Missing Element in Sorted Array  
 ### [56.](https://leetcode.com/problems/merge-intervals/) Merge Intervals  
+```python
+# make output array
+# sort the intervals by the first value and loop thru
+# if output is not empty and the starting time <= ending time of prev interval
+# make the ending time the max of current interval or previous interval
+# else add interval to output
+# Time: O(n)
+# Space: O(n)
+
+out = []
+        
+for i in sorted(intervals, key=lambda i: i[0]):
+  if out and i[0]<=out[-1][-1]:
+    out[-1][-1] = max(out[-1][-1], i[-1])
+  else: 
+    out+=[i]
+return out
+```
 ### [226.](https://leetcode.com/problems/invert-binary-tree/) Invert Binary Tree  
 ### [155.](https://leetcode.com/problems/min-stack/) Min Stack  
 ### [472.](https://leetcode.com/problems/concatenated-words/) Concatenated Words  
