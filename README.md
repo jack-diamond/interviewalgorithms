@@ -1,4 +1,4 @@
-## Amazon SDE Intern 2020 Questions:
+## 2020 Questions:
 
 ### [287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
 ```python
@@ -26,8 +26,27 @@ if len(nums) > 1:
 return -1
 ```
 ### [347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
-```
-keep track of the elements in a minheap with their count in first index.
+```python
+# keep track of the elements in a minheap with their count in first index.
+# Time: O(nlog(k))
+# Space: O(k)
+
+def topKFrequent(self, nums, k):
+  if not nums:
+    return []
+  if len(nums) == 1:
+    return [nums[0]]
+
+  count = collections.Counter(nums)
+  q = []
+
+  for num in set(nums):
+    if len(q) == k:
+      heapq.heappushpop(q, (count[num], num))
+    else:
+      heapq.heappush(q, (count[num], num))
+      
+  return [num[1] for num in reversed(q)]
 ```
 ### [23.](https://leetcode.com/problems/merge-k-sorted-lists/) Merge k Sorted Lists  
 ```python
@@ -63,6 +82,66 @@ r = self.mergeKLists(lists[mid:])
 
 return merge(l, r)
 ```
+### [2.](https://leetcode.com/problems/add-two-numbers/) Add Two Numbers
+```python
+# make a dummy and current node. make a carry value = 0
+# go through while loop until carry or l1 or l2 is done
+# and l1 or l2 vals to carry if they exist
+# get val by modding carry
+# get carry by // 10
+# set next node val to val, increment current
+# Time: O(n+m)
+# Space: O(n+m)
+
+def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+  dummy = ListNode(0)
+  curr = dummy
+  carry = 0
+  while l1 or l2 or carry:
+    if l1:
+      carry += l1.val
+      l1 = l1.next
+    if l2:
+      carry += l2.val
+      l2 = l2.next
+    val = carry % 10
+    carry = carry // 10
+    curr.next = ListNode(val)
+    curr = curr.next
+  return dummy.next
+```
+### [138.](https://leetcode.com/problems/copy-list-with-random-pointer/) Copy List with Random Pointer . 
+```python
+# make a dictionary and current pointer
+# add each node to dictionary referencing a new node
+# go through and add each of dic[curr] neighbors if they exist
+# return the dictionary referencing the head
+# Time: O(n)
+# Space: O(n)
+
+def copyRandomList(self, head: 'Node') -> 'Node':
+  if not head:
+      return None
+
+  dic = {}
+  curr = head
+
+  while curr:
+    dic[curr] = Node(curr.val)
+    curr = curr.next
+
+  curr = head
+
+  while curr:
+    if curr.next:
+      dic[curr].next = dic[curr.next]
+    if curr.random:
+      dic[curr].random = dic[curr.random]
+    curr = curr.next
+
+  return dic[head]
+```
+
 ### [997.](https://leetcode.com/problems/find-the-town-judge/) Find the Town Judge  
 ```python
 # make an array of size n+1 for zero indexing
@@ -144,7 +223,56 @@ for i in sorted(intervals, key=lambda i: i[0]):
 return out
 ```
 ### [226.](https://leetcode.com/problems/invert-binary-tree/) Invert Binary Tree  
+```python
+# Time: O(n)
+# Space: O(n)
+
+# recursively
+if root:
+    root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+    return root
+
+#iteratively
+q = collections.deque([root])
+while q:
+  node = q.popleft()
+  if node:
+    node.left, node.right = node.right, node.left
+    q.append(node.left)
+    q.append(node.right)
+return root
+```
 ### [155.](https://leetcode.com/problems/min-stack/) Min Stack  
+```python
+# Whole point here is to use a stack to append the next value with the current min at all times
+# Time: O(1) look up
+# Space: O(n)
+
+class MinStack:
+  def __init__(self):
+      self.q = []
+
+  def push(self, x: int) -> None:
+    curMin = self.getMin()
+    if curMin is None or x < curMin:
+      curMin = x
+    self.q.append((x, curMin))
+
+  def pop(self) -> None:
+    self.q.pop()
+
+  def top(self) -> int:
+    if len(self.q) == 0:
+      return None
+    else:
+      return self.q[-1][0]
+
+  def getMin(self) -> int:
+    if len(self.q) == 0:
+      return None
+    else:
+      return self.q[-1][1]
+```
 ### [472.](https://leetcode.com/problems/concatenated-words/) Concatenated Words  
 ### [121.](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) Best Time to Buy and Sell Stock  
 ```
@@ -172,6 +300,31 @@ update maximum.
 return convert(0, len(nums) - 1)
 ```
 ### [348.](https://leetcode.com/problems/design-tic-tac-toe/) Design Tic-Tac-Toe  
+```python
+# Instantiate a class by making a row array and col array of size n
+# diagonal set to 0 and anti-diagonal set to zero, and the board size n
+# everytime a player makes a move, calculate the offset, -1 or 1
+# add this offset to diag, anti-diag, rows and cols
+# if offset * n (a row is filled) return the player
+# Time: O(1)
+# Space: O(n)
+
+class TicTacToe:
+  def __init__(self, n):
+    self.row, self.col, self.diag, self.anti_diag, self.n = [0] * n, [0] * n, 0, 0, n
+
+  def move(self, row, col, player):
+    offset = player * 2 - 3
+    self.row[row] += offset
+    self.col[col] += offset
+    if row == col:
+        self.diag += offset
+    if row + col == self.n - 1:
+        self.anti_diag += offset
+    if offset * self.n in [self.row[row], self.col[col], self.diag, self.anti_diag]:
+        return player
+    return 0
+```
 ### [767.](https://leetcode.com/problems/reorganize-string/) Reorganize String  
 ### [31.](https://leetcode.com/problems/next-permutation/) Next Permutation  
 ### [543.](https://leetcode.com/problems/diameter-of-binary-tree/) Diameter of Binary Tree  
@@ -241,6 +394,29 @@ def helper(node, low, high):
   return helper(node.left, low, node.val) and helper(node.right, node.val, high)
 
 return helper(root, float("-inf"), float("inf"))
+```
+### [3.](https://leetcode.com/problems/longest-substring-without-repeating-characters/) Longest Substring Without Repeating Characters  
+```python
+# Keep a starting index, count index, and a dictionary
+# Go thrugh the string and see if character in d and start is less than
+# the index of the current character.
+# if it passes both of these, then make the start 1 + the current character's index
+# keep track of max count otherwise
+# return count
+# Time: O(n)
+# Space: O(n)
+
+def lengthOfLongestSubstring(self, s):
+  start, count = 0, 0
+  d = {}
+  for i in range(len(s)):
+    if s[i] in d and start <= d[s[i]]:
+      start = d[s[i]] + 1
+    else:
+      count = max(i - start + 1, count)
+    d[s[i]] = i
+
+  return count
 ```
 ### [939.](https://leetcode.com/problems/minimum-area-rectangle/) Minimum Area Rectangle  
 
