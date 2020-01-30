@@ -2,28 +2,17 @@
 
 ### [287.](https://leetcode.com/problems/find-the-duplicate-number/) Find the Duplicate Number  
 ```python
-# no fuckin clue
-# does a circle somehow
+# goes through and makes the 
 # Time: O(n)
 # Space: O(1)
+def findDuplicate(self, nums: List[int]) -> int:
+  for i in range(len(nums)):
+    if nums[abs(nums[i]) - 1] < 0:
+      return abs(nums[i])
+    else:
+      nums[abs(nums[i])-1] = -nums[abs(nums[i])-1]
 
-if len(nums) > 1:
-  slow = nums[0]
-  fast = nums[nums[0]]
-
-  while slow != fast:
-    slow = nums[slow]
-    fast = nums[nums[fast]]
-
-  fast = 0
-
-  while fast != slow:
-    fast = nums[fast]
-    slow = nums[slow]
-
-  return slow
-
-return -1
+  return -1
 ```
 ### [347.](https://leetcode.com/problems/top-k-frequent-elements/) Top K Frequent Elements  
 ```python
@@ -464,7 +453,11 @@ Tell me about a time you took help from senior
 - S: At iridium i failed to do one of my tasks before the meeting due to wanting to learn other parts of the stack
 - A: Decided to take more ownership of the tasks i was assigned and made sure to be prepared for the meeting.
 - R: from then on i had decided to give follow up of notes for the meeting and updates on the project
-- (another time could be workign on a school project and not getting all the requirements done) resulting in me focusing on 
+- (another time could be workign on a school project and not getting all the requirements done) resulting in me focusing on
+#### failures
+- meeting deadline at iridium with dashboard based on reports and how i used follow up emails, after meeting notes
+- engineering project for hovercraft. how our project failed final run, ownership of project, lead team for meetings
+
 Tell me a situation where you had to take a tough decision  
 Tell me a situation where you helped someone, even though its not your part  
 Tell me a situation when you don't have enough time to evaluate all the options before doing something.
