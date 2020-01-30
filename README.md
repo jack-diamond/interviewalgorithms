@@ -448,7 +448,11 @@ Zig zag traversal
 
 
 ## Behavioral Questions:  
-Tell me about yourself  
+#### Why amazon?  
+- I am helpful from past internships, working with full stack technologies.
+- It will be a place that i can grow as a software engineer
+- I have had experience with customers working from my first internships, i know how valuable the customer is
+#### Tell me about yourself  
 Sacrifice for larger rewards related question !?  
 Things you did out of your daily job responsiblity ?  
 Tell me a time when you had to decide on 2 differnt approaches  
@@ -456,14 +460,17 @@ When did you deliver more than you were asked?
 When did you make a mistake?  
 Tell me about a time you faced an obstacle and how you overcame it.  
 Tell me about a time you took help from senior  
-a time I was up against a deadline  
+#### deadline  
+- S: At iridium i failed to do one of my tasks before the meeting due to wanting to learn other parts of the stack
+- A: Decided to take more ownership of the tasks i was assigned and made sure to be prepared for the meeting.
+- R: from then on i had decided to give follow up of notes for the meeting and updates on the project
+- (another time could be workign on a school project and not getting all the requirements done) resulting in me focusing on 
 Tell me a situation where you had to take a tough decision  
 Tell me a situation where you helped someone, even though its not your part  
 Tell me a situation when you don't have enough time to evaluate all the options before doing something.
 When was a time when you went over and above for the customer?   
 Have you ever had to make a tough decision without consulting anybody? (bias for action)  
 Have you ever helped a peer who was struggling to understand technology? (ownership)  
-Talk about a time I had a tough deadline and how did I deal with it.  
 setbacks on projects  
 Tell me about a time you made a mistake.  
 
